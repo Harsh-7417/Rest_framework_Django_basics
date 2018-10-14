@@ -6,6 +6,7 @@ from django.urls import path
 
 urlpatterns = [
     path('',get_list,name='get_list'),
+   # path('api/<int:pk>/',productApiview.as_view(),name='apiview'),
     path('create',create_new,name='create'),
     path('update/<int:id>/',update,name='update'),
     path('delete/<int:id>',delete,name='delete')

@@ -1,8 +1,15 @@
 from django.shortcuts import render,redirect
-from .models import productModel
 from .forum import productForm
+from product.models import productModel
 
-# Create your views here.
+
+#from django.shortcuts import render,redirect
+
+
+
+
+
+
 
 def get_list(request):
     products=productModel.objects.all()
