@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+<h3>You can edit below product</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+    <button type="submit">Save</button>
+    </form>
+<br>
+{% if product%}
+<button>
+<a href="{%url 'delete' product.id%}">Delete</a></button>
+{% endif %}
+</body>
+</html>
